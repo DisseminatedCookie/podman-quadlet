@@ -1,0 +1,5 @@
+[Unit]
+Description=Gitlab /etc/gitlab Volume
+
+[Volume]
+Label=Platform=Gitlab

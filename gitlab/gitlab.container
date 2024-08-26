@@ -1,0 +1,19 @@
+[Unit]
+Description=Gitlab Container
+After=local-fs.target
+    
+[Container]
+Label=Platform=Gitlab
+ContainerName=Gitlab
+HostName=<CONTAINER HOSTNAME>
+Image=docker.io/gitlab/gitlab-ce:17.1.6-ce.0
+Volume=gitlab-config.volume:/etc/gitlab
+Volume=gitlab-log.volume:/var/log/gitlab
+Volume=gitlab-opt.volume:/var/opt/gitlab
+Network=gitlab.network
+PublishPort=<EXPOSED PORT>:80
+PublishPort=<EXPOSED PORT>:443
+PublishPort=<EXPOSED PORT>:22
+
+[Install]
+WantedBy=default.target

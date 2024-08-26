@@ -1,0 +1,8 @@
+[Unit]
+Description=Gitlab Container Network
+    
+[Network]
+Label=Platform=Gitlab
+NetworkName=gitlab
+Internal=false
+Driver=bridge

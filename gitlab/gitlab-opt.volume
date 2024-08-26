@@ -1,0 +1,5 @@
+[Unit]
+Description=Gitlab /var/opt/gitlab Volume
+
+[Volume]
+Label=Platform=
