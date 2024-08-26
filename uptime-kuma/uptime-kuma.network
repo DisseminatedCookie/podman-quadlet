@@ -1,0 +1,8 @@
+[Unit]
+Description=Uptime Kuma Container Network
+
+[Network]
+Label=platform=uptime-kuma
+NetworkName=uptimeKuma
+Internal=false
+Driver=bridge

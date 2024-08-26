@@ -1,0 +1,15 @@
+[Unit]
+Description=Uptime Kuma Container
+After=local-fs.target
+
+[Container]
+Label=platform=uptime-kuma
+ContainerName=uptime-kuma
+HostName=<CONTAINER HOSTNAME>
+Image=docker.io/louislam/uptime-kuma
+Volume=uptime-kuma-data.volume:/app/data:Z
+Network=uptime-kuma.network
+PublishPort=<EXPOSED PORT>:3001
+
+[Install]
+WantedBy=default.target
